@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUILD=build/
+BUILD=docs/
 
 rm -rf $BUILD
 mkdir -p $BUILD
