@@ -7,3 +7,4 @@ mkdir -p $BUILD
 
 cp index.html $BUILD
 cp favicons/* $BUILD
+cp CNAME $BUILD
