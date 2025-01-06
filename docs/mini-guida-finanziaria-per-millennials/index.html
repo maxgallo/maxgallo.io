@@ -1,0 +1,714 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Mini Guida Finanziaria per Millennials </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="16f07890-7f63-806f-bccc-dc2da8c96716" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_11.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🧭</span></div><h1 class="page-title"><strong>Mini Guida Finanziaria per Millennials </strong></h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="16f07890-7f63-81d5-9224-c9d248183f58"><div style="font-size:1.5em"><span class="icon">🚨</span></div><div style="width:100%"><strong>Ne abbiamo bisogno.</strong> Nel 2023, l’Italia ha ottenuto un punteggio di <a href="https://www.oecd.org/en/publications/2023/12/oecd-infe-2023-international-survey-of-adult-financial-literacy_8ce94e2c.html">53 su 100 per Educazione Finanziaria</a>. Peggio di noi solo Cambogia, Paraguay e Yemen. <br/><br/>Questa guida è un punto di partenza semplice e pratico su temi che toccano tutti: la pensione pubblica, il TFR, gli investimenti e l’acquisto di una casa.<br/></div></figure><h1 id="17107890-7f63-80b5-a251-c6764de37e90" class="">👵🏻 Pensione pubblica</h1><hr id="17107890-7f63-8046-82e4-f1794443df46"/><p id="17107890-7f63-80b0-8e93-d83c4ad3b944" class="">Ogni volta che ricevi lo stipendio, versi dei <em>Contributi IVS</em> (Invalidità, Vecchiaia e Superstiti) all’INPS - Istituto Nazionale Previdenza Sociale con lo scopo di avere la possibilità di ricevere una pensione di vecchiaia in futuro (e garantire altri tipi di pensioni come quelle sociali o di invalidità).<br/><br/>I contributi sono circa il 33% del tuo Reddito Annuo Lordo (RAL) per i lavoratori dipendenti e 24% per i lavoratori autonomi (Partita Iva). Per i lavoratori dipendenti, il 9,19% è pagato dal lavoratore automaticamente in busta paga, sotto la voce <br/><em>Contributi IVS</em>. Il restante 24% circa è a carico della azienda che li versa direttamente all’INPS.</p><p id="17107890-7f63-8015-87a3-ebab8764eb0d" class="">
+</p><p id="17107890-7f63-8063-838c-e39f0e0edb0c" class="">L&#x27;INPS non conserva i tuoi contributi per restituirteli in futuro, ma li utilizza per pagare le pensioni attuali dei tuoi genitori o nonni. L&#x27;istituto gestisce due tipi di pensioni: quelle <em>previdenziali</em>, dove il lavoratore versa i contributi e riceverà quanto versato al pensionamento, e quelle <em>assistenziali</em>, dove il beneficiario riceve la pensione senza aver versato contributi (come Invalidità, Pensioni Sociali, Pensioni di Guerra, Indennità di Accompagnamento, ecc).</p><div id="17107890-7f63-808c-a382-c279c4232ecb" class="column-list"><div id="0d42c217-9db5-49c2-bc82-6e67c907bc7c" style="width:50%" class="column"><h3 id="17107890-7f63-8058-acf5-d166d1e398a1" class="">Pensioni Previdenziali</h3><hr id="17107890-7f63-809f-8c2e-e2c8fad0c14a"/><p id="17107890-7f63-80e4-ab5f-ce6ccb4378e7" class="">La parte di pensioni <em>previdenziali</em> è quasi in pari. Le entrate, cioè i contributi pensionistici che i lavoratori versano (33% per dipendenti o 24% per autonomi) riescono quasi a coprire tutte le spese per pagare le pensioni <em>previdenziali.</em></p></div><div id="b5fbad98-1b4b-43f9-832a-5bfe7dce70a6" style="width:50%" class="column"><h3 id="d9cc06f4-1617-4a0d-8dd4-7848308fbfbe" class="">Pensioni Assistenziali</h3><hr id="17107890-7f63-8085-9dba-fef27657a1ec"/><p id="17107890-7f63-80a6-b1d0-e0851c5b8af3" class="">La parte di pensioni <em>assistenziali, </em>invece, sono solo uscite, senza nessuna entrata. <strong>Costano allo Stato Italiano circa 160 miliardi di euro</strong> (nel 2022, vedi tabella 6.5 <a href="https://www.itinerariprevidenziali.it/site/home/biblioteca/pubblicazioni/undicesimo-rapporto-bilancio-del-sistema-previdenziale-italiano.html">qui</a>). Per darti un termine di paragone, la spesa sanitaria nello stesso anno è stata di 130 miliardi, mentre scuola, università e ricerca sono costate 70 miliardi. </p></div></div><p id="17107890-7f63-80b9-9fb7-cef27d88dbeb" class="">
+</p><h3 id="17107890-7f63-80a8-b8f5-fdf6f86c2e7a" class="">Consigli Pratici</h3><ul id="17107890-7f63-80bd-91a8-e7ce1364b2a5" class="bulleted-list"><li style="list-style-type:disc">Se sei un dipendente, controlla i <em>Contributi IVS</em> nella tua busta paga. Dovrebbero ammontare circa al 9.19% del tuo lordo.</li></ul><ul id="17107890-7f63-805d-9e6b-de5745325117" class="bulleted-list"><li style="list-style-type:disc">Se sei un dipendente, controlla che il tuo datore di lavoro ti stia versando il restante 24% circa di contributi presso l’INPS. Questo devi farlo dal portale dell’INPS, attraverso il servizio <em><a href="https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-strumenti.consultazione-estratto-conto-contributivo-previdenziale-50119.consultazione-estratto-conto-contributivo-previdenziale.html">Consultazione Estratto conto contributivo/previdenziale</a></em><em> </em>dove vedrai i contributi versati per ogni anno che dovrebbero ammontare circa al 33% del tuo stipendio lordo. </li></ul><p id="17107890-7f63-80a3-9369-f69526ca9c7f" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="17107890-7f63-8031-bd04-f08a48141e24"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="c167b5e2-4f91-483f-9a64-b0817a614e47" class=""><strong>Cosa Fare?</strong></p><p id="9c6709f0-2158-4744-9ccb-50cb4f638a26" class="">Oltre a controllare che i contributi siano versati correttamente nell’INPS non c’è molto da fare. Utilizza il TFR e altre forme di investimento al meglio sapendo che, per la pensione pubblica, andremo in pensione sempre più tardi (vedi riforme degli ultimi anni) e che la pensione ricevuta sarà sempre meno.</p></div></figure><p id="17107890-7f63-8074-8759-c6def904b2a6" class="">
+</p><h3 id="17107890-7f63-80f6-9511-f63fc4d228bc" class="">Come Approfondire ?</h3><ul id="17107890-7f63-8093-bdcd-d685414500bd" class="bulleted-list"><li style="list-style-type:disc">🎥 [video] Live di Mr RIP &amp; Dr.Elegantia (Umberto Bertonelli) <a href="https://www.youtube.com/watch?v=Xnk4tp0QyGI">https://www.youtube.com/watch?v=Xnk4tp0QyGI</a> sulle entrate ed uscite dell’INPS. Un po’ confusionario a tratti ma concetti mega interessanti.</li></ul><ul id="17107890-7f63-8083-b7a9-dc24fde54ea6" class="bulleted-list"><li style="list-style-type:disc"><em>Itinerari Previdenziali</em> ogni anno crea un rapporto sul bilancio del sistema previdenziale Italiano. Sono 160 pagine circa di informazioni ma è fatto veramente bene. <a href="https://www.itinerariprevidenziali.it/site/home/biblioteca/pubblicazioni/undicesimo-rapporto-bilancio-del-sistema-previdenziale-italiano.html">https://www.itinerariprevidenziali.it/site/home/biblioteca/pubblicazioni/undicesimo-rapporto-bilancio-del-sistema-previdenziale-italiano.html</a> (Il PDF è scaricabile dal sito oppure direttamente <a href="https://www.itinerariprevidenziali.it/site/home/biblioteca/pubblicazioni/documento32059891.html">qui</a>). Tabella 6.2 a pagina 114 e 6.5 a pagina 119 sono quelle riassuntive, parti da lì.</li></ul><h1 id="16f07890-7f63-816c-b82b-d8ae860dab7b" class="">👷 TFR - Trattamento di Fine Rapporto </h1><hr id="16f07890-7f63-81f8-9d35-c9749f96cf1f"/><p id="16f07890-7f63-81a1-8a1b-c339aef5df9f" class="">Ogni volta che ricevi lo stipendio, il 6.91% del lordo viene messo da parte. <strong>Tu puoi scegliere come viene messo da parte. </strong>In assenza di scelta, il tuo datore di lavoro lo mette da parte per te, rivalutandolo ogni anno, di poco. Quando finisce il rapporto di lavoro, ti viene restituito il TFR, che viene tassato in maniera simile al reddito (gli scaglioni 2025 sono 23%, 35% e 43%).<br/><br/>Puoi scegliere di mettere da parte il TFR in un Fondo di Categoria (dove la categoria dipende dal tuo contratto di lavoro) e, cosi facendo, pagare solo dal 9% a 15% di tasse, quando andrai a prendere il TFR.<br/></p><p id="17007890-7f63-8011-bb78-da9b8fa73d65" class="">
+</p><p id="17007890-7f63-800d-89ea-c54e41247738" class="">Facciamo un esempio con Mario e Luigi, considerando il caso migliore per il TFR in Azienda (scaglione di tasse basso al 23%) e il caso peggiore (15% invece che 9%) per TFR nel fondo.</p><div id="17007890-7f63-80be-85bc-c0295850d107" class="column-list"><div id="db77d54d-d56e-4416-87cf-78763812e6e5" style="width:50%" class="column"><h3 id="b3680fa0-4d06-42e4-9e87-68d482810d04" class="">Mario - TFR in Azienda</h3><hr id="37f917b0-66e6-42af-b7de-55b4cc954cd5"/><ul id="94dc652a-7219-4e57-992a-8ec0bd880878" class="bulleted-list"><li style="list-style-type:disc">Mario guadagna 25mila euro lordi (Reddito Annuo Lordo - RAL)</li></ul><ul id="d786d123-c323-4ccd-84e1-cc6e8e041d61" class="bulleted-list"><li style="list-style-type:disc">Mario accantona 6.91% di 25mila = 1,727€ ogni anno di TFR presso il suo datore di lavoro</li></ul><ul id="9babe14c-c050-459f-8a85-6c4a7c12e256" class="bulleted-list"><li style="list-style-type:disc">Dopo 30 anni di lavoro, Mario ha accantonato 30*1,727 = 51,810€</li></ul><ul id="17007890-7f63-8043-b3b3-c8f92b66c4f4" class="bulleted-list"><li style="list-style-type:disc">Alla fine del rapporto di lavoro, Mario pagherà il 23% di tasse su 51,810€ = 11,916 € portandosi a casa <strong>39,894€ </strong></li></ul></div><div id="25260edb-6655-40b2-a499-5223eac2f237" style="width:50%" class="column"><h3 id="adfa0568-0a6b-4f32-b14d-1e889b675928" class="">Luigi - TFR nel Fondo</h3><hr id="5c0c2ab4-d562-4e37-a72c-1ea1d32cb171"/><ul id="520fbc76-f5e5-4653-a069-e2db38c1046c" class="bulleted-list"><li style="list-style-type:disc">Luigi guadagna 25mila euro lordi (Reddito Annuo Lordo - RAL) come Mario</li></ul><ul id="17007890-7f63-80c4-a099-f099e59e8467" class="bulleted-list"><li style="list-style-type:disc">Anche Luigi versa 6.91% di 25mila = 1,727€ ogni anno, ma ad un Fondo di Categoria</li></ul><ul id="17007890-7f63-80bc-91e3-c2e9c92e6e77" class="bulleted-list"><li style="list-style-type:disc">Dopo 30 anni di lavoro, Luigi ha accantonato 30*1,727 = 51,810€</li></ul><ul id="17007890-7f63-805e-8426-f82355efcad3" class="bulleted-list"><li style="list-style-type:disc">Al raggiungimento dei 67 anni, Luigi pagherà il 15% di tasse su 51,810€ = 7,771 € portandosi a casa <strong>44,039€</strong> </li></ul></div></div><p id="17007890-7f63-8021-bb37-e8e1a17c154e" class="">
+</p><p id="17007890-7f63-807e-90ab-c1110d7ee80a" class="">Anche con le premesse a favore del TFR in Azienda divario è già evidente. Considera anche che ogni anno il TFR in Azienda viene rivalutato di poco (1.5% + 0.75% dell’inflazione) mentre il TFR nel Fondo di Categoria puoi investirlo e i rendimenti su 20/30 anni sono statisticamente più alti di quelli rivalutati in azienda. Inoltre, molti Fondi di Categoria hanno anche delle agevolazioni aggiuntive.</p><p id="17007890-7f63-80c1-af04-c468f5db4f9e" class="">
+</p><blockquote id="17007890-7f63-802a-b5e7-eecbd254de77" class=""><strong>Esempio</strong><br/>Se hai un Contratto Collettivo Nazionale del Lavoro (CCNL) del Terziario: Commercio, Turismo e Servizi il tuo fondo di categoria si chiama <br/><a href="https://www.fondofonte.it/">Fon.Te.</a> ed ha una agevolazione aggiuntiva: mettendo lo 0.55% di contributo volontario, il tuo datore di lavoro metterà 1.55%. Hai capito bene, soldi gratis.</blockquote><p id="17007890-7f63-80a2-92fa-f2c703a04372" class="">
+</p><h3 id="17007890-7f63-80b5-9400-e5f2e791a0d2" class="">Consigli Pratici</h3><ul id="17007890-7f63-8035-bc82-d55643494fc5" class="bulleted-list"><li style="list-style-type:disc">Il valore del tuo TFR accumulato è scritto in busta paga</li></ul><ul id="17007890-7f63-8030-bf48-c9c8a24d7c01" class="bulleted-list"><li style="list-style-type:disc">Se hai già qualche mese o anno di TFR accumulato presso il tuo datore di lavoro, puoi comunque scegliere di destinare il tuo TFR da oggi in poi ad un Fondo di Categoria. Cosi facendo avrai due TFR, uno presso il datore di lavoro (con i soldi versati fino al giorno del cambio) e poi il fondo di categoria.</li></ul><ul id="17007890-7f63-8096-9f2d-d188c783a6de" class="bulleted-list"><li style="list-style-type:disc">Per destinare il tuo TFR ad un fondo di categoria devi compilare un modulo simile (<a href="https://www.fondofonte.it/wp-content/uploads/2022/06/6_3_MA-V06.0624_Compress-1.pdf">questo il modulo per CCNL Terziario: Commercio, Turismo e Servizi </a>) e consegnarlo al tuo dipartimento di Risorse Umane del tuo datore di lavoro.</li></ul><p id="17007890-7f63-808d-a4bf-f9a913c34297" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="17007890-7f63-801b-af27-eb7e0283561e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="9c6e9fae-491b-4e86-b290-d86d8c7a3719" class=""><strong>Cosa Fare?</strong></p><p id="17007890-7f63-8091-9b71-e85c7143c7e1" class="">Nella stragrande maggioranza dei casi, mettere il TFR nel fondo di categoria <strong>ha dei notevoli vantaggi economici</strong> legati alle tasse pagate e alla rivalutazione. Quindi informati sul tuo Fondo di Categoria e compila il modulo per fare il passaggio per iniziare a destinare il TFR su un fondo.</p></div></figure><p id="17007890-7f63-805b-9caa-e46955b4f666" class="">
+</p><h3 id="17007890-7f63-8024-b452-ffef3feb60eb" class="">Come Approfondire ?</h3><ul id="17007890-7f63-803d-a197-c958a01967f3" class="bulleted-list"><li style="list-style-type:disc"><em>Ciao Elsa</em> è un sito che offre tante risorse per approfondire il TFR e il fondo pensione <a href="https://www.ciaoelsa.com/">https://www.ciaoelsa.com/</a>. Fanno anche sessioni gratuite di gruppo a cui chiedere informazioni.</li></ul><ul id="17007890-7f63-802f-92dc-f8bd151f7cc9" class="bulleted-list"><li style="list-style-type:disc">Puoi fare una comparazione manuale utilizzando questo Google Spreadsheet <a href="https://docs.google.com/spreadsheets/d/1W740YJuf0koFI6tInRxBccnsyXO4o24S26IL7ye2K9M/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1W740YJuf0koFI6tInRxBccnsyXO4o24S26IL7ye2K9M/edit?usp=sharing</a></li></ul><p id="17007890-7f63-804b-b6f2-ff1654629448" class="">
+</p><h1 id="17007890-7f63-8082-86a3-e8cef72e17b4" class="">💰Investimenti</h1><hr id="17007890-7f63-80eb-8efd-f2960f38f42b"/><p id="17007890-7f63-8009-87f8-ea86230e3b11" class="">Nel mondo della finanza ci sono due modi per guadagnare soldi: prestarli a qualcuno oppure possedere un pezzetto di una azienda, sperando che l’azienda vada bene. Il mio consiglio è di imparare qualcosa di base e fare da soli, oppure rivolgersi ad un consulente finanziario <em>indipendente</em> (cioè non legato ad una banca). I consulenti finanziari delle banche hanno incentivi a promuovere prodotti che risultano più vantaggiosi per la banca rispetto a te. Non significa che agiscano sempre in questo modo ma tali incentivi sono comunque sempre presenti.</p><p id="17007890-7f63-80a6-a439-d5fd2c6e696c" class="">
+</p><h3 id="17007890-7f63-806a-8417-dc025dad8c7b" class="">Prestare Soldi: Obbligazioni / Bond</h3><p id="17007890-7f63-8091-b1f9-e4f2e38647c8" class="">Puoi prestare i soldi allo Stato Italiano (Buoni Ordinari del Tesoro - BOT, o Buoni Tesoro Pluriennali - BTP), ad uno Stato Estero o a delle aziende. Il nome tecnico è <em>Obbligazioni </em>(o<em> Bond </em>in inglese).</p><p id="17307890-7f63-801d-aaec-cae99d4d0f26" class=""> </p><p id="17307890-7f63-8071-bd7c-e081c3c269cd" class="">Il rischio delle obbligazioni è legato al fatto che l’entità a cui hai prestato i soldi potrebbe non riuscire a ridarteli indietro. Come ogni investimento, maggiore il guadagno, maggiore il rischio. Facciamo un esempio:</p><ul id="17007890-7f63-8010-8892-ffacd9886579" class="bulleted-list"><li style="list-style-type:disc">Obbligazioni Italia (BTP): Presti i soldi allo stato per 5 anni e lo stato ti ridà il 3-4% lordo annuo</li></ul><ul id="17007890-7f63-807e-88fe-c8f7ecfc54df" class="bulleted-list"><li style="list-style-type:disc">Obbligazioni Turchia: Presti i soldi alla Turchia per 10 anni e ti ridanno indietro circa il 7% annuo</li></ul><p id="17007890-7f63-809a-95de-c60991daf243" class="">
+</p><h3 id="17007890-7f63-8084-a3e9-f99ba2a67b4e" class="">Possedere un pezzetto di Azienda: Azioni / Equity</h3><p id="17007890-7f63-80d4-972c-feb527e686d0" class="">Puoi possedere un pezzetto di azienda comprando le azioni, equity, di quella azienda. Il rischio delle azioni è legato al fatto che, se l’azienda va male, il valore del tuo investimento diminuisce. </p><p id="17307890-7f63-8093-9d8f-c87e8a0ae646" class="">
+</p><p id="17307890-7f63-8085-9d78-e1331f0054a2" class="">Dagli anni 2000 sono stati creati gli ETF (Exchange Traded Fund) Azionari: uno strumento finanziario che ti consente di comprare una moltitudine di azioni di una certa tipologia. Tu compri una o più quote del’ETF ed è come se avessi comprato azioni di tante aziende, spesso sparse per il mondo.<br/><br/>Gli ETF Azionari sono importanti perché sono strumenti a costi molto bassi che offrono ritorni potenziali maggiori delle Obbligazioni. Il rischio di questo strumento, rispetto alle azioni singole, è ridotto significativamente investendo per almeno 10 anni e utilizzando ETF Azionari globali. In poche parole: il mercato globale può andare male per qualche anno ma a lungo andare è sempre cresciuto e molto probabilmente crescerà ancora.<br/></p><p id="17107890-7f63-80ed-b069-efcbc556dc03" class="">
+</p><h3 id="17107890-7f63-80ca-b14c-f423ed257c86" class="">Come vengono tassati gli investimenti ?</h3><p id="17107890-7f63-80d6-95e1-c909c1cafb04" class="">Sia le obbligazioni che le azioni vengono tassate nel momento in cui tu ottieni dei guadagni, chiamati anche plusvalenze. Se perdi soldi, non devi pagare tasse. Sulle obbligazioni governative - come BTP Italia - la tassazione è al 12,5% delle plusvalenze mentre su obbligazioni non governative  - come aziende private - e su Azioni, la tassazione è al 26%, sempre delle plusvalenze. Se vuoi investire con meno pensieri sulle tassazioni, scegli una piattaforma di investimento in <em>Regime Amministrato. </em>Questa pagherà le tasse in automatico per te e tu non devi fare nulla. </p><p id="17307890-7f63-8043-be39-c765084ae804" class="">
+</p><h3 id="17307890-7f63-800b-9649-ea58ba73e500" class="">Dove Investire ?</h3><p id="17307890-7f63-8078-b515-e34593e1164f" class="">Scegli una piattaforma online in Regime Amministrato. Una delle più famose in Italia è <a href="https://www.directa.it/index-ita.html">Directa</a>. I costi sono ridotti e molti PAC sono addirittura gratuiti.</p><p id="17307890-7f63-80f0-8be3-e330d2d0717d" class="">
+</p><h3 id="17007890-7f63-80bf-9b49-fd6033b445f9" class="">Come e quanto investire ?</h3><p id="17007890-7f63-8028-aed9-d727f7d12712" class="">Se hai una somma di denaro disponibile adesso e vuoi investirla tutta insieme, puoi comprare direttamente le obbligazioni o ETF Azionari scelti. Se vuoi investire poco alla volta, puoi fare un Piano di Accumulo - detto anche PAC - dove investi una certa somma ogni mese, anche solo 100€. Questa è una soluzione molto comune per le persone che ricevono uno stipendio fisso ogni mese.</p><p id="17307890-7f63-80e0-b134-d40214b9fb14" class="">
+</p><p id="17007890-7f63-80ec-9b4a-c15b1d13ccda" class="">Se avrai bisogno dei tuoi soldi tra un numero prestabilito di anni, magari meno di 10, scegli le obbligazioni.  Se invece puoi tenere i tuoi soldi investiti per più di 10 anni, scegli un ETF Azionario</p><p id="17007890-7f63-8058-bdbc-fc83288d2d23" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="17007890-7f63-8056-9386-d66ba143fda5"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="0ac952e4-d447-4dc9-ba46-e75880c5d234" class=""><strong>Cosa Fare ?</strong></p><ol type="1" id="17307890-7f63-8066-9d88-cc7f4d460321" class="numbered-list" start="1"><li>Prima di investire, assicurati di avere un fondo di emergenza che copra le tue spese per 3-6 mesi. Se ce l’hai, passa al prossimo step.</li></ol><ol type="1" id="17307890-7f63-801d-a504-d97bdfbee2a3" class="numbered-list" start="2"><li><strong>VWCE &amp; Chill. </strong>Se puoi tenere i tuoi soldi investiti per almeno 10 anni, apriti un conto su Directa e compra un ETF Azionario globale come <a href="https://www.justetf.com/en/etf-profile.html?isin=IE00BK5BQT80">VWCE</a>. Puoi comprarlo tutto insieme oppure fare un PAC dove stabilisci tu quanto investire ogni mese. In quest’ultimo caso dovrai impostare dei bonifici automatici dal tuo conto a quello di Directa ogni mese.</li></ol></div></figure><p id="17007890-7f63-807d-832a-e9c41377d3f2" class="">
+</p><h3 id="17007890-7f63-805b-8596-c79b04ceecfd" class="">Come Approfondire ?</h3><ul id="17007890-7f63-8024-b3b2-f5cc3b41e4ae" class="bulleted-list"><li style="list-style-type:disc">🎥 [video corso] Educati e Finanziati - Paolo Coletti. Il Prof Coletti ci fornisce un magnifico corso base di finanza gratuito in 23 video da 30/40 minuti l’uno. Indispensabile.  <a href="https://www.youtube.com/watch?v=cSlr2I1GGiw&amp;list=PLfuzpc-H8qcdetz_Zwc5ILnbiG6eek_T8">https://www.youtube.com/watch?v=cSlr2I1GGiw&amp;list=PLfuzpc-H8qcdetz_Zwc5ILnbiG6eek_T8</a></li></ul><ul id="17307890-7f63-8060-9bdf-e4afb111491e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://open.spotify.com/show/2cQw8L6e7XXA90K1LpZekV">The Bull Podcast</a> episodi da 1 a 25, da circa 25 minuti l’uno. Riccardo Spada parla di argomenti base di finanza personale (vai ad episodi più recenti per argomenti più avanzati)</li></ul><ul id="17107890-7f63-80e3-a4ba-f3cb738caba8" class="bulleted-list"><li style="list-style-type:disc">Usa <a href="https://justetf.com/">https://justetf.com/</a> per cercare gli ETF e <a href="https://www.simpletoolsforinvestors.eu/monitors.shtml">https://www.simpletoolsforinvestors.eu/monitors.shtml</a> per trovare le obbligazioni</li></ul><ul id="17107890-7f63-80b5-8c53-e1d9d0860d3e" class="bulleted-list"><li style="list-style-type:disc">Chi seguire che parla di Finanza Personale in Italia? <a href="https://www.youtube.com/@PaoloColetti">Paolo Coletti</a>, <a href="https://www.youtube.com/@mr_rip">Mr RIP</a>, <a href="https://open.spotify.com/show/2cQw8L6e7XXA90K1LpZekV">The Bull Podcast</a></li></ul><ul id="17107890-7f63-80a9-8293-e1907f9d6d9e" class="bulleted-list"><li style="list-style-type:disc">La community del forum Finanza Online tiene aggiornato un <a href="https://forum.finanzaonline.com/threads/conti-deposito-foglio-excel-calcolo-interessi-e-rendimenti-confronto-e-strategie-cap-xxii-info-post-1-e-2.2064031/">foglio excel con tutti i conti deposito e conti correnti remunerati</a></li></ul><p id="17007890-7f63-8099-926c-c371c7889ffa" class="">
+</p><h1 id="17007890-7f63-806a-9720-c4fe6847c35f" class="">🏠 Comprare Casa</h1><hr id="17007890-7f63-8003-a379-d0a50c444797"/><p id="17007890-7f63-8082-81e9-e85e1bfc8ae6" class="">
+</p><p id="17007890-7f63-8083-8682-efcc1e6a75df" class="">Contrariamente alla saggezza popolare, comprare una casa non è sempre un buon investimento finanziario e no, stare in affitto non sempre vuol dire “buttare soldi”. È un argomento molto spinoso ma bisogna sfatare questo mito con cui tutti siamo cresciuti in Italia.</p><p id="17107890-7f63-808a-a397-ca0e63522dec" class="">
+</p><blockquote id="17107890-7f63-8049-81ac-cc3631f97e81" class="">La proprietà della casa è da sempre per gli italiani indicatore di progressione<br/>sociale, di sicurezza per sé e per le generazioni che seguiranno, uno status<br/>da conseguire anche a costo di sacrifici, poiché l’investimento nella prima<br/>casa e più in generale nella proprietà immobiliare ha prodotto negli anni un<br/>ritorno securizzante, che ha prevalso sulla mera valutazione finanziaria. <br/><br/><br/><a href="https://www.censis.it/sites/default/files/downloads/Secondo%20Rapporto%20Censis%20Federpropriet%C3%A0_2.pdf">Secondo Rapporto Censis Federproprietà, 2023</a></blockquote><p id="17107890-7f63-80f3-806b-c9bad676d0ca" class="">
+</p><p id="17007890-7f63-800c-8457-e87398e81b23" class="">Facciamo due conti semplificati</p><div id="17007890-7f63-8003-8547-c73210bff3f4" class="column-list"><div id="dcd0567f-5de8-46fc-adc6-6442d4b9bce8" style="width:50%" class="column"><h3 id="11bb9890-5443-47cf-97c3-60352fdbc231" class="">Mario - Compra Casa</h3><hr id="68afbcb4-80c1-4286-af38-ab188e034c52"/><ul id="43460698-32ea-41a8-bbb6-50527afec6e6" class="bulleted-list"><li style="list-style-type:disc">Mario ha 220mila euro da parte</li></ul><ul id="e905e702-48de-4860-b62e-59b99f7138ac" class="bulleted-list"><li style="list-style-type:disc">Mario compra 200mila euro di casa spendendone 20 per avvocati, notai e piccola ristrutturazione prima di entrare</li></ul><ul id="864e81e7-5955-48fb-a753-eba0185121e9" class="bulleted-list"><li style="list-style-type:disc">Il primo anno, Mario ha un investimento del valore di 200mila euro, la sua casa.</li></ul><ul id="0c865285-7576-4fdb-8615-b766dcf5cac5" class="bulleted-list"><li style="list-style-type:disc">Dopo 20 anni, Mario ha sempre il suo investimento del valore di 200mila euro, la sua casa.</li></ul><p id="17307890-7f63-80dd-84fa-ca514db04428" class="">
+</p></div><div id="2d7182d1-f7e1-4b61-8cab-3351d0863c76" style="width:50%" class="column"><h3 id="d6a51594-2016-4f69-a7d9-e0afd2dde29f" class="">Luigi - Affitto e Investimento</h3><hr id="95dee845-7d0d-4eaf-9f22-8ef9a8bb0884"/><ul id="b40066ab-66bf-44d7-b38c-57d368f3c699" class="bulleted-list"><li style="list-style-type:disc">Luigi ha 220mila euro da parte</li></ul><ul id="e705cdee-8757-4bf4-a5ed-494214c594d8" class="bulleted-list"><li style="list-style-type:disc">Luigi è in affitto in una casa molto simile a quella comprata da Mario e spende circa 800€ al mese, 9600€ all’anno.</li></ul><ul id="17007890-7f63-8010-9c57-dc09dc9c4bc9" class="bulleted-list"><li style="list-style-type:disc">Luigi, oltre ad affittare la casa, investe subito i suoi 220mila euro in un ETF Azionario Globale.</li></ul><ul id="4b0480e0-2ff9-402b-b00a-d0702386e836" class="bulleted-list"><li style="list-style-type:disc">L’ETF Azionario Globale di Luigi frutta in media il 5% all’anno, quindi ogni anno Luigi riceve 11 mila euro di ricavi. Ne paga 9600€ di affitto e investe quegli altri 1400€ che gli avanzano. </li></ul><ul id="e4b6fe58-b586-4602-8e8a-3f220e371b80" class="bulleted-list"><li style="list-style-type:disc">Dopo 20 anni, Luigi ha un investimento che vale 270 mila euro, il 35% in più di Mario</li></ul></div></div><p id="17107890-7f63-8018-82c9-cade5b9d1ec6" class="">
+</p><p id="17107890-7f63-800b-8b0d-e597d731dc72" class="">Nell’esempio ho volutamente tenuto fuori alcune complicazioni con lo scopo di far capire che molto spesso tanta differenza non c’è e il diavolo è nei dettagli: prezzo iniziale, aumento o diminuzione del valore della casa, rendimento degli ETF azionari, aumento dell’affitto, lavori straordinari da fare sull’immobile, tasso del mutuo e molto altro. È importante ricordare che una casa è un bene immobile: se avessi bisogno di liquidità, anche solo 15.000 euro, il possesso di una casa non ti sarebbe d’aiuto.</p><p id="17107890-7f63-803f-9799-f2bd2933b1d7" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="17107890-7f63-80d0-ab81-fad9e444136f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="4e69034d-8f08-4d39-ab84-17ae5c5b4c58" class=""><strong>Cosa Fare ?</strong></p><p id="b95e415d-167e-4bdc-8dc5-b7fe96658f3a" class="">Dimostra a te stesso che comprare quella casa che vuoi è un buon investimento. Se non lo è ma la vuoi comprare lo stesso per altri motivi va benissimo, almeno saprai quanto ti costano quei motivi.</p></div></figure><p id="17007890-7f63-80e8-9aa1-f95970accf70" class="">
+</p><h3 id="17007890-7f63-809b-bc32-d5c6f89147ac" class="">Come Approfondire ?</h3><ul id="17107890-7f63-80ce-bddd-ecafdd30ed40" class="bulleted-list"><li style="list-style-type:disc">Clona questo spreadsheet e controlla se vale la pena per il tuo caso comprare casa <a href="https://docs.google.com/spreadsheets/d/1uFDPfeZrbXZbA1lWHONpfXcS6hyvOMW6n2PLX9PBpdU/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1uFDPfeZrbXZbA1lWHONpfXcS6hyvOMW6n2PLX9PBpdU/edit?usp=sharing</a></li></ul><ul id="17007890-7f63-80a6-9058-cbd77123e862" class="bulleted-list"><li style="list-style-type:disc">Bella analisi di Tomas Pueyo sul futuro del Real Estate (TLDR: lui dice di non comprare casa) <a href="https://unchartedterritories.tomaspueyo.com/p/why-i-dont-invest-in-real-estate">https://unchartedterritories.tomaspueyo.com/p/why-i-dont-invest-in-real-estate</a></li></ul><p id="17307890-7f63-80f1-840e-df59a7f741d9" class="">
+</p><p id="17307890-7f63-80f4-9b7d-e4a38381053e" class="">
+</p><h2 id="16f07890-7f63-8112-815a-dde29d46cfa2" class="">Note</h2><p id="17307890-7f63-800f-a22d-c4bb7a00c8bd" class="">Made with ❤️ by Massimiliano Gallo.</p><p id="17307890-7f63-80ea-8aad-c8f026fbea06" class="">Aggiornato a Gennaio 2025.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
